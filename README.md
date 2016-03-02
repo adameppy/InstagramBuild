@@ -1,6 +1,6 @@
-# Project 6 - *Name of App Here*
+# Project 6 - *My Instagram*
 
-**Name of your app** is a photo sharing app using Parse as its backend.
+**My Instagram** is a photo sharing app using Parse as its backend.
 
 Time spent: **X** hours spent in total
 
@@ -46,7 +46,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2016 Adam Epstein
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
