@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var vc: UIImagePickerController!
+    
+    @IBOutlet weak var pictureView: UIImageView!
+    @IBOutlet weak var captionField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +27,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     @IBAction func takePicture(sender: AnyObject) {
-        let vc = UIImagePickerController()
+        vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
         vc.sourceType = UIImagePickerControllerSourceType.Camera
@@ -32,7 +37,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func addPicture(sender: AnyObject) {
-        let vc = UIImagePickerController()
+        vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
         vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
@@ -49,7 +54,32 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             // Do something with the images (based on your use case)
             
             // Dismiss UIImagePickerController to go back to your original view controller
+            
             dismissViewControllerAnimated(true, completion: nil)
+            pictureView.image = editedImage
+    }
+    
+    @IBAction func onSubmit(sender: AnyObject) {
+        Post.postUserImage(pictureView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
+            if success{
+                print("Posted to instagram successfully")
+                self.navigationController?.popToRootViewControllerAnimated(true)
+                
+            } else{
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
+    func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        // check if image is not nil
+        if let image = image {
+            // get image data and check if that is not nil
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
     }
     /*
     // MARK: - Navigation

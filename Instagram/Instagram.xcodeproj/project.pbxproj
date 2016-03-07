@@ -14,9 +14,9 @@
 		66711CD11C8CF0130044EED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66711CCF1C8CF0130044EED0 /* LaunchScreen.storyboard */; };
 		66711CD91C8CF5980044EED0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CD81C8CF5980044EED0 /* LoginViewController.swift */; };
 		66711CDE1C8D23410044EED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66711CDC1C8D23410044EED0 /* Main.storyboard */; };
-		66711CE21C8D57CA0044EED0 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CE11C8D57CA0044EED0 /* ImagePickerController.swift */; };
 		66711CE41C8D589C0044EED0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CE31C8D589C0044EED0 /* PictureViewController.swift */; };
-		66711CE61C8D5D230044EED0 /* PickPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CE51C8D5D230044EED0 /* PickPickerController.swift */; };
+		66711CE81C8D64710044EED0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CE71C8D64710044EED0 /* Post.swift */; };
+		66711CEA1C8D6B040044EED0 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66711CE91C8D6B040044EED0 /* PictureCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		66711CD21C8CF0130044EED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66711CD81C8CF5980044EED0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		66711CDD1C8D23410044EED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		66711CE11C8D57CA0044EED0 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		66711CE31C8D589C0044EED0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		66711CE51C8D5D230044EED0 /* PickPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPickerController.swift; sourceTree = "<group>"; };
+		66711CE71C8D64710044EED0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		66711CE91C8D6B040044EED0 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		77162F5043DD7069E11FEBD5 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		883234F9EBF1613F37EBA06A /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		D9D621A5C0CFFA05088B5964 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,9 +76,9 @@
 				66711CD21C8CF0130044EED0 /* Info.plist */,
 				66711CD81C8CF5980044EED0 /* LoginViewController.swift */,
 				66711CDC1C8D23410044EED0 /* Main.storyboard */,
-				66711CE11C8D57CA0044EED0 /* ImagePickerController.swift */,
 				66711CE31C8D589C0044EED0 /* PictureViewController.swift */,
-				66711CE51C8D5D230044EED0 /* PickPickerController.swift */,
+				66711CE71C8D64710044EED0 /* Post.swift */,
+				66711CE91C8D6B040044EED0 /* PictureCell.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -222,12 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66711CE61C8D5D230044EED0 /* PickPickerController.swift in Sources */,
 				66711CD91C8CF5980044EED0 /* LoginViewController.swift in Sources */,
 				66711CC91C8CF0130044EED0 /* InstagramViewController.swift in Sources */,
+				66711CEA1C8D6B040044EED0 /* PictureCell.swift in Sources */,
 				66711CC71C8CF0130044EED0 /* AppDelegate.swift in Sources */,
-				66711CE21C8D57CA0044EED0 /* ImagePickerController.swift in Sources */,
 				66711CE41C8D589C0044EED0 /* PictureViewController.swift in Sources */,
+				66711CE81C8D64710044EED0 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
