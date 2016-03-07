@@ -40,6 +40,26 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         }
 
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        let query = PFQuery(className: "Post")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
+            if let posts = posts {
+                // do something with the array of object returned by the call
+                self.posts = posts
+                for post in posts{
+                    print(post)
+                }
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
